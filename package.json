@@ -1,0 +1,37 @@
+{
+  "name": "Nodefony",
+  "version": "1.0.0",
+  "description": "Nodefony Electron Application",
+  "main": "electron.js",
+  "scripts": {
+    "start": "electron .",
+    "build-osx": "electron-packager . Nodefony --platform=darwin --arch=x64 --version=1.6.12 --icon=Icon.icns"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nodefony/nodefony-electron.git"
+  },
+  "keywords": [
+    "Electron",
+    "nodefony"
+  ],
+  "author": "name <mail@domain.com>",
+  "license": "CECILL-B",
+  "licenses": [
+    {
+      "type": "CECILL-B",
+      "url": "http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.html"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "contributors": [
+    {}
+  ],
+  "devDependencies": {
+    "electron": "~1.6.2",
+    "electron-packager": "^8.7.2"
+  },
+  "dependencies": {
+    "nodefony": "git://github.com/nodefony/nodefony-core.git#dev"
+  }
+}
