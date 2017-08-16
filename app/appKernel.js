@@ -48,6 +48,23 @@ module.exports = nodefony.register("appKernel",function(){
 					this.mainWindow.loadURL('https://localhost:5152')
 			  }
 			});
+			app.on('certificate-error', (event, webContents, url, error, certificate, callback) => {
+			  if (/https:\/\/localhost/g.test(url)) {
+			    // Verification logic.
+			    event.preventDefault();
+			    callback(true);
+			  } else {
+			    callback(false);
+			  }
+			});
+			// Quit when all windows are closed.
+			app.on('window-all-closed', function () {
+			  // On OS X it is common for applications and their menu bar
+			  // to stay active until the user quits explicitly with Cmd + Q
+			  if (process.platform !== 'darwin') {
+			    app.quit()
+			  }
+			});
 		}
 
 		initializeTray(){

@@ -2,9 +2,9 @@
   "name": "Nodefony",
   "version": "1.0.0",
   "description": "Nodefony Electron Application",
-  "main": "electron.js",
+  "main": "nodefony",
   "scripts": {
-    "start": "electron .",
+    "start": "electron nodefony -d dev",
     "build-osx": "electron-packager . Nodefony --platform=darwin --arch=x64 --version=1.6.12 --icon=Icon.icns"
   },
   "repository": {
