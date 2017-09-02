@@ -36,9 +36,13 @@ module.exports = nodefony.register("appKernel",function(){
 
 		initializeElectron (){
 			this.on("onPostReady", () => {
-				this.initializeTray();
-				this.createMainWindow();
-				this.mainWindow.loadURL('https://localhost:5152/angular');
+				try {
+					this.initializeTray();
+					this.createMainWindow();
+					this.mainWindow.loadURL('https://localhost:5152');
+				}catch(e){
+					throw e;
+				}
 			});
 			app.on('activate',  () => {
 			  // On OS X it's common to re-create a window in the app when the
@@ -65,6 +69,11 @@ module.exports = nodefony.register("appKernel",function(){
 			    app.quit()
 			  }
 			});
+
+			app.on('browser-window-created',(e,window) =>{
+				this.logger("browser-window-created hide menu","DEBUG");
+				window.setMenu(null);
+			});
 		}
 
 		initializeTray(){
@@ -86,7 +95,9 @@ module.exports = nodefony.register("appKernel",function(){
 				minHeight: 800,
 				//backgroundColor: '#312450',
 				icon: this.icon
+				//frame: false
 			});
+
 
 			this.mainWindow.on('closed',  () => {
 				// Dereference the window object, usually you would store windows

@@ -28,10 +28,11 @@
     {}
   ],
   "devDependencies": {
-    "electron": "~1.7.5",
-    "electron-packager": "^8.7.2"
+    "electron": "^1.7.5",
+    "electron-packager": "^9.0.0"
   },
   "dependencies": {
-    "nodefony": "git://github.com/nodefony/nodefony-core.git#dev"
+    "nodefony": "git://github.com/nodefony/nodefony-core.git#dev",
+    "npm": "^5.3.0"
   }
 }
