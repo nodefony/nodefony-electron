@@ -1,6 +1,6 @@
 webpackJsonp(["styles"],{
 
-/***/ "./node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!./node_modules/postcss-loader/index.js?{\"ident\":\"postcss\"}!./src/styles.css":
+/***/ "./node_modules/css-loader/index.js?{\"sourceMap\":false,\"import\":false}!./node_modules/postcss-loader/lib/index.js?{\"ident\":\"postcss\",\"sourceMap\":false}!./src/styles.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
@@ -357,7 +357,7 @@ function updateLink(linkElement, obj) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!./node_modules/postcss-loader/index.js?{\"ident\":\"postcss\"}!./src/styles.css");
+var content = __webpack_require__("./node_modules/css-loader/index.js?{\"sourceMap\":false,\"import\":false}!./node_modules/postcss-loader/lib/index.js?{\"ident\":\"postcss\",\"sourceMap\":false}!./src/styles.css");
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__("./node_modules/style-loader/addStyles.js")(content, {});
@@ -366,8 +366,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js??ref--8-1!../node_modules/postcss-loader/index.js??postcss!./styles.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js??ref--8-1!../node_modules/postcss-loader/index.js??postcss!./styles.css");
+		module.hot.accept("!!../node_modules/css-loader/index.js??ref--7-1!../node_modules/postcss-loader/lib/index.js??postcss!./styles.css", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js??ref--7-1!../node_modules/postcss-loader/lib/index.js??postcss!./styles.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

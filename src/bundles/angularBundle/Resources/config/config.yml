@@ -4,11 +4,11 @@
 #
 #===============================================================================
 #
-#  Copyright © 2017/2017         | 
+#  Copyright © 2017/2018        admin | admin@nodefony.com
 #
 # ===============================================================================
 #
-#        GENERATE BY demo BUILDER YAML FILE
+#        GENERATE BY nodefony BUILDER YAML FILE
 #
 # This file is YAML  FILE
 # ---
@@ -20,7 +20,7 @@
 #
 #
 
-########## demo CONFIG ANGULAR BUNDLE TYPE  angularBundle  ############
+########## nodefony CONFIG ANGULAR BUNDLE TYPE  angularBundle  ############
 name        : angularBundle
 version     : "1.0.0"
 locale      : en_en
