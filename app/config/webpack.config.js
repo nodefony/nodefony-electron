@@ -14,10 +14,10 @@ if (kernel.environment === "dev") {
 
 module.exports = webpackMerge(config, {
   context: public,
-  target: "web",
+  target: "electron-main",
   //watch: false,
   entry: {
-    app: ["./js/app.js"]
+    app: ["./js/app.js", "./electron/menu.js"]
   },
   output: {
     path: public,
